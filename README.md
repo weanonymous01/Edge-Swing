@@ -6,6 +6,7 @@ A systematic swing trading engine designed to capture asymmetric “fat-tail” 
 
 
 **+13.65% return vs NIFTY 50 (+6.93%)** 
+
 Backtested across multiple strategy iterations  
 Built with Python, technical indicators, and LLM-assisted signal reasoning
 
