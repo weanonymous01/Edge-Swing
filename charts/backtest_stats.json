@@ -1,0 +1,18 @@
+{
+  "period": "Jan 2024 \u2014 Jan 2025",
+  "strategy": "v3.3 Pyramiding (RS Filter, Slippage)",
+  "starting_capital": 115000,
+  "ending_capital": 106515.05,
+  "total_return_pct": -7.38,
+  "total_pnl": -8484.95,
+  "total_trades": 32,
+  "wins": 5,
+  "losses": 27,
+  "win_rate": 15.6,
+  "avg_win": 2552.96,
+  "avg_loss": -787.03,
+  "profit_factor": 0.6,
+  "largest_win": 8156.19,
+  "top_3_pct": 0,
+  "max_drawdown": -8.99
+}
