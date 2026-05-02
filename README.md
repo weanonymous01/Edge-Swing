@@ -1,6 +1,11 @@
-# Edge Swing — Quantitative ETF Swing Trading CLI Assistant (India)
+## Edge Swing — Quantitative Trend-Following System (India)
 
-A Python CLI tool that analyses Indian ETFs and high-beta Large-Cap stocks daily and outputs **actionable swing trade signals (BUY / WATCH / SKIP)** using real market data, technical indicators, and LLM-based reasoning.
+A systematic swing trading engine designed to capture asymmetric “fat-tail” trends in Indian ETFs and large-cap stocks.
+
+Backtested across multiple strategy iterations  
++13.65% return vs NIFTY 50 (+6.93%)  
+Built with Python, technical indicators, and LLM-assisted signal reasoning
+
 
 ![Combined Equity Curve](charts/equity_vs_nifty.png)
 
