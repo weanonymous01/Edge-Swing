@@ -1,12 +1,13 @@
 ## Edge Swing — Quantitative Trend-Following System (India)
+A systematic swing trading engine designed to capture asymmetric “fat-tail” trends in Indian ETFs and large-cap stocks.
+
+
+![Combined Equity Curve](charts/equity_vs_nifty.png)
+
 
 Backtested across multiple strategy iterations  
 +13.65% return vs NIFTY 50 (+6.93%)  
 Built with Python, technical indicators, and LLM-assisted signal reasoning
-
-A systematic swing trading engine designed to capture asymmetric “fat-tail” trends in Indian ETFs and large-cap stocks.
-
-![Combined Equity Curve](charts/equity_vs_nifty.png)
 
 ---
 
