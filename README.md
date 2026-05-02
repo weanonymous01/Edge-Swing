@@ -2,7 +2,7 @@
 
 A Python CLI tool that analyses Indian ETFs and high-beta Large-Cap stocks daily and outputs **actionable swing trade signals (BUY / WATCH / SKIP)** using real market data, technical indicators, and LLM-based reasoning.
 
-![Combined Equity Curve](reports/charts/equity_vs_nifty.png)
+![Combined Equity Curve](charts/equity_vs_nifty.png)
 
 ---
 
@@ -16,16 +16,35 @@ Edge-Swing/
 ├── indicators.py                 # Deterministic scoring engine (trend, RSI, volume, risk-reward)
 ├── ai_engine.py                  # DeepSeek via OpenRouter — enriches BUY signals with reasoning
 ├── formatter.py                  # Rich CLI output — color-coded cards, tables, panels
+├── generate_report_charts.py     # Generates charts used in reports
+│
 ├── data/
 │   ├── __init__.py
 │   ├── yfinance_fallback.py      # PRIMARY data source (yfinance + ta library)
 │   └── alphavantage_fallback.py  # FALLBACK data source (Alpha Vantage API)
+│
 ├── charts/                       # Auto-generated backtest charts (PNG)
-├── reports/
-│   └── FINAL_STRATEGY_ANALYSIS.md# Full backtest report with charts & quantitative analysis
-├── .env                          # Your API keys (fill these in)
-├── .env.example                  # Template for .env
-└── requirements.txt              # Python dependencies
+│   ├── asset_contribution.png
+│   ├── drawdown.png
+│   ├── equity_curve.png
+│   ├── etf_comparison.png
+│   ├── monthly_returns.png
+│   ├── pnl_distribution.png
+│   ├── trade_outcomes.png
+│   ├── win_rate.png
+│   ├── trades.csv
+│   └── backtest_stats.json
+│
+├── 
+│   └── FINAL_STRATEGY_ANALYSIS.md  # Full backtest report with charts & quantitative analysis
+│
+├── BACKTEST_REPORT.md            # Additional report / earlier results
+├── README.md                     # Project overview & usage
+├── LICENSE                       # MIT license
+├── requirements.txt              # Python dependencies
+├── .gitignore                    # Ignore rules
+├── .env.example                  # Template for API keys
+└── .env                          # Your API keys (NOT for GitHub)
 ```
 
 ---
@@ -175,7 +194,7 @@ By eliminating micro-managed, tight trailing stops and allowing macro trends to 
 | **v3.2 (Wide Trail, Pyramid)** | **+13.65%** | **-7.20%** | **1.91** | 23.7% | **₹3,660 / ₹-594** |
 | v3.3 (RS + Slippage + Pyramid)| -7.38% | -8.99% | 0.60 | 15.6% | ₹2,552 / ₹-787 |
 
-![Metrics Comparison](reports/charts/metrics_comparison.png)
+![Metrics Comparison](charts/metrics_comparison.png)
 
 ---
 
@@ -197,7 +216,7 @@ To institutionalize the performance profile of the winning strategy (v3.2), we e
 
 ## 4. Equity Curve Analysis
 
-![Combined Equity Curve](reports/charts/equity_vs_nifty.png)
+![Combined Equity Curve](charts/equity_vs_nifty.png)
 
 **Regime Behavior:**
 The NIFTY 50 benchmark experienced elevated volatility during the Q2 pre-election chop and the Q4 market correction. In contrast, the v3.2 equity curve exhibits the classic profile of a professional trend-following model:
@@ -208,7 +227,7 @@ The NIFTY 50 benchmark experienced elevated volatility during the Q2 pre-electio
 
 ## 5. Drawdown Analysis
 
-![Return vs Drawdown](reports/charts/comparison_bar.png)
+![Return vs Drawdown](charts/comparison_bar.png)
 
 **Risk vs Stability:**
 Across all iterations, the capital protection engine (ATR filtering + NIFTY regime filter + 2-loss cooldown sequence) proved structurally sound. Every strategy iteration maintained a single-digit (or near single-digit) drawdown, heavily outperforming the NIFTY's -12.92% drawdown.
@@ -247,7 +266,7 @@ The system generates genuine structural alpha. It is not merely a function of lo
 
 ## 8. Fat Tail Analysis (CRITICAL)
 
-![Top Trades Impact](reports/charts/fat_tail.png)
+![Top Trades Impact](charts/fat_tail.png)
 
 Trend-following systems rely entirely on **asymmetrical payoff structures**. 
 In v3.2, the win rate was exceptionally low (23.7%). However, the system remains wildly profitable due to the "Fat Tail" effect. 
