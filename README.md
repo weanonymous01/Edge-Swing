@@ -5,8 +5,8 @@ A systematic swing trading engine designed to capture asymmetric “fat-tail” 
 ![Combined Equity Curve](charts/equity_vs_nifty.png)
 
 
+**+13.65% return vs NIFTY 50 (+6.93%)** 
 Backtested across multiple strategy iterations  
-+13.65% return vs NIFTY 50 (+6.93%)  
 Built with Python, technical indicators, and LLM-assisted signal reasoning
 
 ---
